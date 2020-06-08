@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 开启驼峰命名法 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+	<typeAliases>
+		<!-- 別名不区分大小写 为某一个java类起别名，默认首字母小写形式的该java类名 -->
+		<!-- <typeAlias type="com.atguigu.mybatis.bean.Employee" alias="emp"/> -->
+		<!-- 为某一个包及其后代包中的所有类起别名，别名为首字母小写形式的该java类名 -->
+		<package name="dao" />
+	</typeAliases>
+
+</configuration>

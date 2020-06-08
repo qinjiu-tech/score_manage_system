@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统</title>
+    <link rel="icon" href="../image/我的成绩.png">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+    <header id="head">
+        <div class="navbar position-relative bg">
+            <div class="navbar-brand mx-auto mr-md-auto ml-md-0">
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle xue">学</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle sheng">生</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle cheng">成</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle ji">绩</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle guan">管</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle li">理</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle xi">系</span>
+                <span class="d-inline-block ml-3 text-white font-weight-bold align-middle tong">统</span>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav Bootstrap ml-auto">
+                        <li class="nav-item">
+                            <a id="score-manage0" href="#score-area"
+                                class="nav-link text-white text-center py-3 font-weight-bold active"
+                                data-toggle="tab">成绩管理</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="my-info0" href="#info-area"
+                                class="nav-link text-white text-center py-3 font-weight-bold" data-toggle="tab">我的信息</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-auto d-none d-md-block pt-4 pr-0 pl-4 conLeft">
+                <h5 class="text-white font-weight-bold mb-4">管理系统</h5>
+                <nav class="nav flex-column subNav">
+                    <a id="score-manage" href="#score-area"
+                        class="nav-link text-white text-center py-3 font-weight-bold active" data-toggle="tab">成绩管理</a>
+                </nav>
+                <nav class="nav flex-column subNav">
+                    <a id="my-info" href="#info-area" class="nav-link text-white text-center py-3 font-weight-bold"
+                        data-toggle="tab">我的信息</a>
+                </nav>
+            </div>
+            <div class="col conRight">
+                <div class="tab-content">
+                    <!-- 成绩管理 -->
+                    <div class="tab-pane active" id="score-area">
+                        <!-- 管理员 -->
+                        <div class="root-area" style="display: none;">
+                            <div class="root-form">
+                                <form id="info-form">
+                                    <div class="item">
+                                        <label for="id">学号/工号</label>
+                                        <input type="text" id="id" name="id" placeholder="账号/工号">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label for="name">姓名</label>
+                                        <input type="text" id="name" name="name" placeholder="姓名">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label>性别</label>
+                                        <input type="radio" name="gender" id="gender" value="男" checked>男
+                                        <input type="radio" name="gender" id="gender" value="女">女
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label for="classes">年级</label>
+                                        <input type="text" id="classes" name="classes" placeholder="年级">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label for="faculty">院系</label>
+                                        <input type="text" id="faculty" name="faculty" placeholder="院系">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label for="special">专业</label>
+                                        <input type="text" id="special" placeholder="专业">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <label for="phone">手机号</label>
+                                        <input type="text" id="phone" placeholder="手机号">
+                                    </div>
+                                   
+                                    <div class="item">
+                                        <label for="">身份</label>
+                                        <input type="radio" name="type" id="type" value="teacher" checked>老师
+                                        <input type="radio" name="type" id="type" value="student">学生
+                                    </div>
+                                    <div class="item">
+                                        <label for=""></label>
+                                        <button id="submit">添加</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 个人成绩 -->
+                        <div class="my-score" style="display: none;">
+                            <div class="row">
+                                <!-- <div class="col-md-6 col-12">
+                                    <div>
+                                        <div class="title">id</div>
+                                        <div class="info">201600800267</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div>
+                                        <div class="title">id</div>
+                                        <div class="info">201600800267</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- 学院 -->
+                        <div class="faculty-area" style="display: none;">
+                            <div class="row faculty">
+                                <!-- <div class="col-md-3 col-sm-4 col-6">
+                                    <p>物理与电子信息学院</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>2</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>3</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>4</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>5</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>6</p>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- 年级 -->
+                        <div class="classes-area" style="display: none;">
+                            <div class="classes-back-btn back-btn">
+                                <span class="back-span">返回</span>
+                            </div>
+                            <div class="row classes">
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p class="p-classes">2016</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p class="p-classes">2017</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p class="p-classes">2018</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p class="p-classes">2019</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 专业 -->
+                        <div class="special-area" style="display: none;">
+                            <div class="special-back-btn  back-btn">
+                                <span class="back-span">返回</span>
+                            </div>
+                            <div class="row special">
+                                <!-- <div class="col-md-3 col-sm-4 col-6">
+                                    <p>移动互联</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>智能信息</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-6">
+                                    <p>应用物理学</p>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- 成绩表 -->
+                        <div class="score-table" style="display: none;">
+                            <div class="score-back-btn  back-btn">
+                                <span class="echarts-btn" data-toggle="modal"
+                                    data-target="#echartsMessage"><span>成绩分析</span></span> <span
+                                    class="back-span">返回</span>
+                            </div>
+                            <table class="table table-borderless text-center">
+                                <thead>
+                                    <!-- <tr class="table-secondary">
+                                        <th>学号</th>
+                                        <th>姓名</th> -->
+                                    <!-- <th>语文</th>
+                                        <th>数学</th>
+                                        <th>英语</th>
+                                        <th>Java</th>
+                                        <th>Android</th>
+                                        <th>Linux</th> -->
+                                    <!-- <th>修改成绩</th>
+                                    </tr> -->
+                                </thead>
+                                <tbody id="table-body" class="table-light">
+                                    <!-- <tr class="table-secondary">
+                                        <td>201600800267</td>
+                                        <td>秦玖</td>
+                                        <td>98</td>
+                                        <td>100</td>
+                                        <td>56</td>
+                                        <td>89</td>
+                                        <td>98</td>
+                                        <td>65</td>
+                                        <td>编辑</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <!-- 编辑弹出层 -->
+                            <div class="modal fade" id="editMessage">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">编辑学生成绩</h5>
+                                            <button id="close-form" type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <form id="edit-form" class="d-inline-block">
+                                                <!--  -->
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                                                id="submitBtn">提交</button>
+                                            <button type="reset" class="btn btn-primary" id="editResetBtn">重置</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 成绩分析弹出层 -->
+                            <div class="modal fade" id="echartsMessage">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">
+                                                各科成绩分析&nbsp;&nbsp;(&nbsp;优秀:&gt;85分;&nbsp;&nbsp;&nbsp;良好:70-80分;&nbsp;&nbsp;&nbsp;及格:60-70分;&nbsp;&nbsp;&nbsp;不及格:&lt;60分&nbsp;)
+                                            </h5>
+                                            <button id="close-form" type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <div class="row">
+                                                <!-- <div class="col-12 col-md-6" style="height: 400px; width: 100%;">
+                                                    <div id="city-chart" style="height: 400px; width: 100%;"></div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 我的信息 -->
+                    <div class="tab-pane" id="info-area">
+                        <div class="row">
+                            <!-- <div class="col-md-6 col-12">
+                                <div>
+                                    <div class="title">id</div>
+                                    <div class="info">201600800267</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div>
+                                    <div class="title">id</div>
+                                    <div class="info">201600800267</div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/myAjax.js"></script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

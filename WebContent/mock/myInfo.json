@@ -1,0 +1,14 @@
+{
+    "status": "success",
+    "msg": "获取个人信息成功！",
+    "data": {
+        "id": "201600800267",
+        "name": "秦玖",
+        "gender": "男",
+        "classes": 2016,
+        "faculty": "物理与电子信息学院",
+        "special": "移动互联",
+        "phone": "13287196612",
+        "type": "student"
+    }
+}

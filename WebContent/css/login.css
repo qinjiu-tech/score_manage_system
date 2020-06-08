@@ -1,0 +1,173 @@
+html {
+    font-size: 14px;
+    min-width:400px;
+}
+
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../image/login-bg.jpg");
+    background-size: cover;
+}
+
+.header {
+    height: 8rem;
+}
+
+.header .title {
+    text-indent: 4rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 8rem;
+}
+
+.header .title span {
+    color: #fff;
+    text-shadow: 5px 5px 10px #ccc;
+}
+
+.main {
+    height: calc(100% - 8rem);
+    position: relative;
+}
+
+.main .login {
+    width: 350px;
+    position: absolute;
+    top: 5rem;
+    right: 15rem;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+/* 小于768的时候就满足 */
+@media all and (max-width:768px){
+    html{
+        font-size: 12px;
+    }
+    body .wrapper{
+    	min-width:400px;
+    }
+    .main .login {
+        width: 350px;
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+}
+
+.main .login .tabs {
+    height: 3rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(59, 55, 55);
+}
+
+.main .login .tabs .tab {
+    width: 50%;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .login .tabs .tab.active {
+    color: red;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.main .login .tabs .tab.register-tab::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 1px;
+    color: rgb(59, 55, 55);
+    text-shadow: 0 0 0;
+}
+
+.main .login #login-form>div,
+.main .login #register-form>div {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 3rem;
+    margin-bottom: 1rem;
+    /* background-color: #f00; */
+}
+
+.main .login #login-form>div label:nth-of-type(1) {
+    padding-left: 0.5rem;
+    width: 4rem;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    background-color: #ccc;
+}
+
+.main .login #login-form>div input {
+    width: calc(100% - 5rem);
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.main .login input::placeholder {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+
+
+.main .login #register-form>div label:nth-of-type(1) {
+    padding-left: 0.5rem;
+    width: 5rem;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    background-color: #ccc;
+}
+
+.main .login #register-form>div:not(.type-area) input {
+    width: calc(100% - 6rem);
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+#register-btn,
+#login-btn{
+    background-color: rgb(6, 156, 6);
+    width: 100%;
+    border: none;
+    height: 3rem;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+#my-modal .tip-content{
+    position: fixed;
+    background-color: #fff;
+    padding:0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f0;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}

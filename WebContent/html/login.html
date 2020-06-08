@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统-登录</title>
+    <link rel="icon" href="../image/我的成绩.png">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="title">
+                <span>学</span>
+                <span>生</span>
+                <span>成</span>
+                <span>绩</span>
+                <span>管</span>
+                <span>理</span>
+                <span>系</span>
+                <span>统</span>
+            </div>
+        </header>
+        <div class="main">
+            <div class="login">
+                <div class="tabs" id="tabs">
+                    <div class="tab register-tab" data-id="register-form">注册</div>
+                    <div class="tab login-tab active" data-id="login-form">登录</div>
+                </div>
+                <div id="login-form">
+                    <div class="user-area">
+                        <label for="id">帐号:</label>
+                        <input type="text" id="id" placeholder="请输入学号/工号">
+                    </div>
+                    <div class="pwd-area">
+                        <label for="pwd">密码:</label>
+                        <input type="password" id="pwd" placeholder="请输入密码">
+                    </div>
+                    <button id="login-btn">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                </div>
+                <div id="register-form" style="display: none;">
+                    <div class="user-area">
+                        <label for="id">帐号:</label>
+                        <input type="text" id="id" placeholder="请输入学号/工号">
+                    </div>
+                    <div class="pwd-area">
+                        <label for="pwd">密码:</label>
+                        <input type="password" id="pwd" placeholder="请输入密码">
+                    </div>
+                    <div class="pwd-sub-area">
+                        <label for="pwd-sub">确认密码:</label>
+                        <input type="password" id="pwd-sub" placeholder="请再次输入密码">
+                    </div>
+                    <div class="type-area">
+                        <label for="">身份:</label>
+                        &nbsp;&nbsp;
+                        <input class="type" type="radio" name="type" id="student-type" value="student" checked>
+                        <label for="student-type" style="font-weight: 700;">学生</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="type" type="radio" name="type" id="teacher-type" value="teacher">
+                        <label for="teacher-type" style="font-weight: 700;">老师</label>
+                    </div>
+                    <button id="register-btn">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+                </div>
+            </div>
+        </div>
+        <!-- 弹出框 -->
+        <div id="my-modal" style="display: none;">
+            <!-- <div class="tip-content" style="color: red;">登录成功！</div> -->
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/myAjax.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

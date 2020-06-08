@@ -1,0 +1,415 @@
+html {
+    font-size: 14px;
+    font-family: 'YouYuan';
+}
+
+
+/* 小于768的时候就满足 */
+@media all and (max-width:768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media all and (min-width:768px) {
+    #head nav.fixed-top {
+        display: none;
+    }
+}
+
+
+
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 头部 */
+#head {
+    height: 4.5rem;
+    background: linear-gradient(90deg, #333, #111, #aaa);
+}
+
+#head .bg {
+    background: url('../image/bg.png') repeat center;
+}
+
+#head nav.fixed-top {
+    top: 0.5rem !important;
+}
+
+#head nav .navbar-collapse {
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-top: 1rem !important;
+}
+
+#head nav .navbar-collapse ul li {
+    padding: 1rem !important;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #000 !important;
+    font-size: 1.2rem !important;
+
+}
+
+/*  */
+#head .navbar-brand span {
+    font-size: 1.7rem;
+    text-shadow: 4px 2px 6px #ccc;
+    animation: jumping 0.8s infinite alternate forwards;
+}
+
+#head .navbar-brand .xue {
+    animation-delay: 0s;
+}
+
+#head .navbar-brand .guan {
+    animation-delay: 0.8s;
+}
+
+#head .navbar-brand .sheng {
+    animation-delay: 0.2s;
+}
+
+#head .navbar-brand .li {
+    animation-delay: 1s;
+}
+
+#head .navbar-brand .cheng {
+    animation-delay: 0.4s;
+}
+
+#head .navbar-brand .xi {
+    animation-delay: 1.2s;
+}
+
+#head .navbar-brand .ji {
+    animation-delay: 0.6s;
+}
+
+#head .navbar-brand .tong {
+    animation-delay: 1.4s;
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(10px);
+        text-shadow: 4px 2px 6px #ccc;
+    }
+
+    100% {
+        transform: translateY(-15px);
+        text-shadow: 3px 5px 6px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* 尺寸小于576就满足 */
+@media all and (max-width:576px) {
+    #head .navbar-brand span {
+        animation: none;
+    }
+
+    body {
+        min-width: 400px;
+    }
+
+    #score-area .score-table table thead tr th:nth-of-type(1),
+    #score-area .score-table table tbody tr td:nth-of-type(1) {
+        display: none;
+    }
+
+    #score-area .score-table table thead tr th {
+        word-break: break-all;
+    }
+}
+
+#nav {
+    left: 0;
+    top: 4.5rem;
+    background: linear-gradient(#333, #222, #111);
+}
+
+#nav a {
+    color: #ccc;
+}
+
+#nav a:hover {
+    color: #fff;
+}
+
+#head .bg button:hover svg {
+    animation: change 2s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.content {
+    background: linear-gradient(#3a3a3a, #222, #111);
+}
+
+.conLeft {
+    height: calc(100vh - 4.5rem);
+    background: url('../image/bg.png') repeat center;
+    box-sizing: border-box;
+}
+
+.conLeft .subNav a {
+    width: 180px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.conLeft .subNav a.active,
+.conLeft .subNav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.content .row .conRight {
+    height: calc(100vh - 4.5rem);
+    background: #e5e5e5;
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 0;
+}
+
+#score-area {
+    padding: 0 1rem;
+    position: relative;
+}
+
+#score-area .back-btn {
+    position: relative;
+    height: 2.5rem;
+}
+
+#score-area .score-table .back-btn {
+    height: 3.5rem;
+}
+
+#score-area .back-btn .back-span {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #999;
+
+}
+
+#score-area .back-btn .echarts-btn {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 7rem;
+}
+
+#score-area .back-btn>span:hover {
+    box-shadow: 2px 2px 5px #000;
+    font-weight: 700;
+}
+
+#score-area .back-btn .back-span::after {
+    content: '';
+    position: absolute;
+    /* border:1.25rem solid #000; */
+    top: 0;
+    left: -2.4rem;
+    /* border-right-color: #fff; */
+    border: 1.25rem solid transparent;
+    border-right-color: #fff;
+}
+
+#score-area .row>div {
+    padding: 1rem;
+    height: 10rem;
+}
+
+#score-area .row>div>p {
+    box-shadow: 0 0 10px #ccc;
+    height: 100%;
+    text-align: center;
+    line-height: 8rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#score-area .row>div>p:hover {
+    box-shadow: 3px 3px 10px #65adca;
+    color: #65adca;
+    text-shadow: 2px 2px 5px #aaa;
+}
+
+#score-area .score-table {
+    /* padding: 1rem 0; */
+}
+
+#score-area .score-table .table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+#score-area .score-table .table thead th {
+    background-color: #a6a8af;
+}
+
+#score-area .score-table .table tbody td {
+    background-color: #fff;
+}
+
+#score-area .my-score {
+    padding: 1rem 0;
+}
+
+#score-area .my-score .row>div {
+    height: auto;
+}
+
+#info-area {
+    padding: 1rem;
+}
+
+#info-area .row>div,
+#score-area .my-score .row>div {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+#info-area .row>div>div,
+#score-area .my-score .row>div>div {
+    font-size: 1.2rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px #aaa;
+}
+
+#info-area .row div .title,
+#score-area .my-score .row div .title {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: 6rem;
+    background-color: #c5c2c5;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#info-area .row div .info,
+#score-area .my-score .row div .info {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background-color: #fff;
+}
+
+
+
+
+#edit-btn {
+    padding: 2px 10px;
+    background-color: #28a745;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+}
+
+#edit-btn:hover {
+    background-color: #218838;
+}
+
+.modal-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+#echartsMessage .modal-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+}
+
+#echartsMessage .modal-content .modal-body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 1rem;
+}
+
+/* .row>div col-*/
+#echartsMessage .modal-content .modal-body .row>div {
+    /* width: 100%;
+    height: 400px; */
+    padding: 1rem;
+    position: relative;
+}
+
+/*  .row>col>chart*/
+#echartsMessage .modal-content .modal-body .row>div>div {
+    /* width: 100%;
+    height: 100%; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+#echartsMessage .modal-content .modal-body .row>div>div>div {
+    /* width: 100%;
+    height: 100%; */
+}
+
+#info-form{
+    width: 350px;
+    margin: 1rem auto;
+    border:1px solid #000;
+    padding:1rem;
+    border-radius:5px;
+}
+#info-form>div>label{
+    width: 80px;
+}
+#info-form #submit{
+	width:30%;
+}

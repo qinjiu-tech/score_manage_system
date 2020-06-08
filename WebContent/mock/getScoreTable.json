@@ -1,0 +1,36 @@
+{
+    "status":"success",
+    "msg":"获取全班成绩成功！",
+    "data":[
+        {
+            "name":"东方不败",
+            "id":"201600800001",
+            "data":{
+                "chinese":96,
+                "java":77,
+                "android":62,
+                "linux":59,
+                "english":56,
+                "math":85,
+                "totalScore":435
+            }
+        },
+        {
+            "name":"任盈盈",
+            "id":"201600800002",
+            "data":{
+                "totalScore":0
+            }
+        },
+        {
+            "name":"令狐冲",
+            "id":"201600800003",
+            "data":{
+                "chinese":99,
+                "english":99,
+                "math":99,
+                "totalScore":297
+            }
+        }
+    ]
+}
